@@ -1,0 +1,9 @@
+/es    /es/index.html    200
+
+# Legal pages — serve the static HTML at the extensionless footer URLs
+/legals/risk-disclosure-notice         /legals/risk-disclosure-notice.html         200
+/legals/general-risk-disclaimer        /legals/general-risk-disclaimer.html        200
+/legals/general-terms-and-conditions   /legals/general-terms-and-conditions.html   200
+/legals/privacy-policy                 /legals/privacy-policy.html                 200
+/legals/cookie-policy                  /legals/cookie-policy.html                  200
+/legals/broker-disclosure              /legals/broker-disclosure.html              200
