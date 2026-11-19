@@ -1,0 +1,89 @@
+/* 10X Trader — legal pages. Light theme, matches the marketing site tokens. */
+:root{
+  --navy:#154359; --accent:#0068a2; --sky:#4bbdf0; --deep:#014d7e;
+  --frost:#f0f5f7; --line:#d7e2e7; --line-strong:#b7cbd3;
+  --navy-2:#3f6274; --navy-3:#557080; --neg:#b42318; --white:#fff;
+  --font-firs:"TT Firs Neue","Inter",system-ui,sans-serif;
+  --font-sans:"Inter",system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--white); color:#2f4b57;
+  font-family:var(--font-sans); font-size:15px; line-height:1.72;
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+}
+img{max-width:100%}
+a{color:var(--accent); text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* header */
+.site-header{
+  position:sticky; top:0; z-index:5;
+  background:rgba(255,255,255,.92); backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.site-header .inner{
+  max-width:960px; margin:0 auto; padding:16px 24px;
+  display:flex; align-items:center; justify-content:space-between; gap:16px;
+}
+.brand{display:flex; align-items:center; gap:10px}
+.brand img{height:30px; width:auto; display:block}
+.brand .name{
+  font-family:var(--font-firs); font-weight:700; font-size:18px;
+  color:var(--navy); letter-spacing:-.01em;
+}
+.site-header .entity{
+  font-size:11px; color:var(--navy-3); letter-spacing:.04em; text-transform:uppercase;
+}
+
+/* document */
+main{max-width:860px; margin:0 auto; padding:56px 24px 96px}
+.doc-head{margin-bottom:28px; padding-bottom:24px; border-bottom:1px solid var(--line)}
+.doc-head h1{
+  font-family:var(--font-firs); font-size:34px; line-height:1.15; font-weight:700;
+  color:var(--navy); margin:0 0 10px; letter-spacing:-.02em;
+}
+.doc-head .meta{font-size:13px; color:var(--navy-3)}
+
+.doc h2{
+  font-family:var(--font-firs); font-size:20px; font-weight:700; color:var(--navy);
+  margin:38px 0 14px; letter-spacing:-.01em;
+}
+.doc h3{
+  font-family:var(--font-firs); font-size:14px; font-weight:700; color:var(--navy-2);
+  margin:24px 0 10px; text-transform:uppercase; letter-spacing:.04em;
+}
+.doc p{margin:0 0 14px}
+.doc strong{color:var(--navy)}
+.doc em{font-style:italic; color:var(--navy-2)}
+.doc ul,.doc ol{margin:0 0 14px 20px; padding:0}
+.doc li{margin:0 0 6px}
+
+.doc .table-wrap{overflow-x:auto; margin:16px 0 22px}
+.doc table{width:100%; border-collapse:collapse; font-size:13.5px}
+.doc th,.doc td{border:1px solid var(--line); padding:10px 14px; text-align:left; vertical-align:top}
+.doc th{background:var(--frost); font-weight:600; color:var(--navy)}
+
+.callout{
+  background:rgba(75,189,240,.08); border:1px solid rgba(75,189,240,.35);
+  border-radius:10px; padding:16px 18px; margin:18px 0; font-size:14px;
+}
+.callout strong{color:var(--deep)}
+.warn{
+  background:rgba(180,35,24,.05); border:1px solid rgba(180,35,24,.28);
+  color:#8f1b12; border-radius:10px; padding:14px 18px; margin:18px 0;
+  font-weight:600; text-align:center; letter-spacing:.01em;
+}
+
+/* footer */
+.doc-foot{margin-top:56px; padding-top:24px; border-top:1px solid var(--line); font-size:12.5px; color:var(--navy-3)}
+.doc-foot .links{display:flex; flex-wrap:wrap; gap:8px 16px; margin-bottom:12px}
+.doc-foot .links a{color:var(--navy-2)}
+.doc-foot .entity{line-height:1.6}
+
+@media(max-width:600px){
+  .doc-head h1{font-size:27px}
+  main{padding:36px 18px 72px}
+  .site-header .entity{display:none}
+}
