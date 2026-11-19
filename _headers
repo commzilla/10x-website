@@ -1,0 +1,12 @@
+# Netlify headers (added 2026-11-19 for SEO and trust signals)
+
+# Built files have content hashes in their names, so they can be cached for a year
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/*
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
