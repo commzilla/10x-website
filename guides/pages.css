@@ -195,3 +195,8 @@ main.wide{max-width:1120px}
 .doc h2[id]{scroll-margin-top:90px}
 main > .join{margin-top:48px}
 @media(max-width:600px){ .a-head h1{font-size:28px} .share{margin-left:0} }
+
+/* Key takeaways box on guide pages */
+.takeaways{margin:8px 0 24px; padding:16px 18px 6px; border:1px solid var(--line); border-radius:12px; background:var(--frost)}
+.takeaways .t{font-family:var(--font-firs); font-weight:700; color:var(--navy); margin:0 0 8px}
+.takeaways ul{margin:0 0 10px 18px}
