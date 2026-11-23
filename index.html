@@ -65,8 +65,15 @@
     <script type="module" crossorigin src="/assets/index-G7nA10xb.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-CwJ8V8DR.css">
     <style>
-      /* Top menu tab only fits beside the logo and buttons from 1280px; below that it overlapped them */
-      @media (width < 80rem) { nav[aria-label="Primary"] { display: none !important; } }
+      /* Top menu tab only fits beside the logo and buttons from 1280px. Below that it moved over them,
+         so on tablets and laptops it drops below the header row as a floating pill */
+      @media (width >= 48rem) and (width < 80rem) {
+        nav[aria-label="Primary"] {
+          top: 78px; border-radius: 999px; padding: 10px 26px; gap: 26px;
+          box-shadow: 0 6px 24px rgba(21, 67, 89, .10), 0 0 0 1px rgba(21, 67, 89, .06);
+        }
+        nav[aria-label="Primary"] > span[aria-hidden] { display: none; }
+      }
     </style>
   </head>
   <body>
