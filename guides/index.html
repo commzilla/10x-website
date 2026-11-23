@@ -5,13 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Trading Guides | 10X Trader</title>
 <meta name="description" content="Plain-English trading guides from 10X Trader: funded accounts, prop firms, buying power and trading costs, compared fairly.">
-<meta name="robots" content="index,follow">
+<meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="https://10xtrader.com/guides">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="10X Trader">
 <meta property="og:url" content="https://10xtrader.com/guides">
 <meta property="og:title" content="Trading Guides | 10X Trader">
-<meta property="og:description" content="Plain-English trading guides: funded accounts, prop firms, buying power and trading costs, compared fairly.">
+<meta property="og:description" content="Plain-English trading guides from 10X Trader: funded accounts, prop firms, buying power and trading costs, compared fairly.">
 <meta name="twitter:card" content="summary">
 <meta name="theme-color" content="#ffffff">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -27,9 +27,17 @@
   "@type": "CollectionPage",
   "url": "https://10xtrader.com/guides",
   "name": "Trading Guides",
-  "publisher": {"@id": "https://10xtrader.com/#organization", "@type": "Organization", "name": "10X Trader", "url": "https://10xtrader.com/"},
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://10xtrader.com/#organization",
+    "name": "10X Trader"
+  },
   "hasPart": [
-    {"@type": "Article", "url": "https://10xtrader.com/guides/funded-trading-account", "headline": "Funded trading account: 4 ways to trade bigger than your deposit"}
+    {
+      "@type": "Article",
+      "url": "https://10xtrader.com/guides/funded-trading-account",
+      "headline": "Funded trading account: 4 ways to trade bigger than your deposit"
+    }
   ]
 }
 </script>
@@ -49,33 +57,66 @@
   </div>
 </header>
 
-<main>
-  <div class="doc-head">
+<main class="wide">
+  <div class="g-intro">
     <p class="eyebrow">Guides</p>
     <h1>Trading guides</h1>
-    <p class="lead">
-      Plain-English guides to funded accounts, prop firms, buying power and trading costs. We compare
-      every route fairly, including where another one is a better fit than ours.
-    </p>
+    <p class="lead">Plain-English guides to funded accounts, prop firms, buying power and trading costs. We compare every route fairly, including where another one is a better fit than ours.</p>
   </div>
 
-  <article class="doc">
-    <ul class="guide-list">
-      <li>
-        <a class="guide-card" href="/guides/funded-trading-account">
-          <h2>Funded trading account: 4 ways to trade bigger than your deposit</h2>
-          <p>Prop firm challenges, instant funding, first-loss accounts and your own capital, compared
-            side by side: what you pay, what you can lose and who owns the account.</p>
-          <span class="meta">Updated 23 November 2026 &nbsp;·&nbsp; 7 min read</span>
-        </a>
-      </li>
-    </ul>
+  <div class="g-top">
+    <a class="g-feature" href="/guides/funded-trading-account">
+      <img src="/guides/images/funded-trading-account-cover.webp" width="1600" height="900" fetchpriority="high" alt="">
+      <span class="pill">Getting funded</span>
+      <span class="meta">23 November 2026 &nbsp;·&nbsp; 7 min read</span>
+      <h2>Funded trading account: 4 ways to trade bigger than your deposit</h2>
+      <p>Prop firm challenges, instant funding, first-loss accounts and your own capital, compared side by side: what you pay, what you can lose and who owns the account.</p>
+      <span class="more">Read the guide</span>
+    </a>
+    <div class="g-side">
+        <form class="g-search" role="search" onsubmit="return false">
+          <label for="q" class="sr">Search guides</label>
+          <input id="q" type="search" placeholder="Search guides" autocomplete="off">
+          <ul id="q-results" hidden></ul>
+        </form>
+        <script>
+        (() => {
+          const guides = [{"t": "Funded trading account: 4 ways to trade bigger than your deposit", "u": "/guides/funded-trading-account", "c": "Getting funded"}];
+          const q = document.getElementById('q'), out = document.getElementById('q-results');
+          const esc = s => s.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'})[c]);
+          q.addEventListener('input', () => {
+            const term = q.value.trim().toLowerCase();
+            if (!term) { out.hidden = true; return; }
+            const hits = guides.filter(g => (g.t + ' ' + g.c).toLowerCase().includes(term));
+            out.innerHTML = hits.length
+              ? hits.map(g => `<li><a href="${g.u}">${esc(g.t)}<span>${esc(g.c)}</span></a></li>`).join('')
+              : '<li class="none">No guides match yet. New guides are added every week.</li>';
+            out.hidden = false;
+          });
+        })();
+        </script>
+        
+        <h2 class="side-h">Topics</h2>
+        <ul class="g-topics">
+          <li><a href="/guides/topics/getting-funded">Getting funded</a></li>
+          <li><a href="/guides/topics/trading-costs">Trading costs</a></li>
+          <li><a href="/guides/topics/risk-and-leverage">Risk and leverage</a></li>
+          <li><a href="/guides/topics/how-10x-works">How 10X works</a></li>
+        </ul>
+    </div>
+  </div>
 
-    <p class="byline" style="margin-top:28px">
-      Written by 10X Trader, which offers one of the routes these guides cover. Guides are general
-      information, not financial advice. Leverage amplifies losses as well as gains.
-    </p>
-  </article>
+  
+  <aside class="join">
+      <div>
+        <h2>Talk trading with the 10X community</h2>
+        <p>Questions about a guide, funding routes or your own trading? Ask in our Discord.</p>
+      </div>
+      <a class="btn" href="https://10x-discord-join.vercel.app/">Join our Discord</a>
+    </aside>
+  
+
+  <p class="byline g-note">Written by 10X Trader, which offers one of the routes these guides cover. Guides are general information, not financial advice. Leverage amplifies losses as well as gains. The most you can lose is your deposit.</p>
 
   <footer class="doc-foot">
     <div class="links">
