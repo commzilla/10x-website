@@ -296,26 +296,50 @@
     </ol>
 
     <h2 id="what-each-route-costs">What each route costs: a worked example</h2>
-    <p><em>Example figures, to show the maths. They are not any firm's real prices.</em> Say you have
-      £500 to put towards trading, and in one month you make 8% on the account size you're trading.</p>
+    <p><em>Example figures, to show the maths. They are not any firm's real prices and not a forecast.</em>
+      Say you have $500 to put towards trading (10X accounts are in US dollars), and in one month you make
+      5% on the account size you're trading.</p>
     <div class="table-wrap">
       <table>
         <thead>
-          <tr><th></th><th>Prop firm challenge</th><th>Instant funding</th><th>First-loss account</th><th>Your own capital</th></tr>
+          <tr><th></th><th>Prop firm challenge</th><th>Instant funding</th><th>10X broker account</th><th>Your own capital</th></tr>
         </thead>
         <tbody>
-          <tr><th>Paid before trading</th><td>£100 fee (Example), lost if you fail</td><td>£300 fee (Example), not refundable</td><td>£500 deposit, still yours</td><td>£500 deposit, still yours</td></tr>
-          <tr><th>Account size you trade</th><td>£10,000 simulated (Example), after passing</td><td>£5,000 simulated (Example)</td><td>10 × balance in buying power</td><td>£500</td></tr>
-          <tr><th>An 8% month</th><td>£640 payout if paid out (80% share)</td><td>£320 payout if paid out (80% share)</td><td>8% of the buying power, minus spread and commission, added to your balance</td><td>£40</td></tr>
-          <tr><th>If the month goes wrong</th><td>Account closed, fee gone, pay again to retry</td><td>Account closed, fee gone</td><td>Losses come off your deposit; the most you can lose is your deposit</td><td>Losses come off your deposit</td></tr>
+          <tr><th>Paid before trading</th><td>$100 fee (Example), lost if you fail</td><td>$300 fee (Example), not refundable</td><td>$500 deposit, still yours</td><td>$500 deposit, still yours</td></tr>
+          <tr><th>Account size you trade</th><td>$10,000 simulated (Example), after passing</td><td>$5,000 simulated (Example)</td><td>$5,000 of buying power (10 × balance), reset after every closed trade</td><td>$500</td></tr>
+          <tr><th>A 5% month</th><td>$400 payout if paid out (80% share)</td><td>$200 payout if paid out (80% share)</td><td>About $305 profit with scaling: balance $500 to $805, before spread and commission</td><td>$25</td></tr>
+          <tr><th>A 5% losing month</th><td>Fee gone if a loss limit is broken; pay again to retry</td><td>Fee gone if a loss limit is broken</td><td>About $205 loss with scaling: balance $500 to $295. The most you can lose is your deposit</td><td>$25 loss</td></tr>
         </tbody>
       </table>
     </div>
-    <p>What the table shows: fee-based routes cost the same whether you win or lose, and only pay out if
-      you pass and the firm approves the payout. The live routes cost you through spread and commission on
-      every trade, so how often you trade matters more than any headline fee. Leverage amplifies losses as
-      well as gains: the 8% month above could just as easily be an 8% loss, and at 10 times buying power
-      an 8% move against you would take about 80% of a first-loss deposit.</p>
+
+    <h3 id="how-scaling-works">How scaling works over that month (10X, Example)</h3>
+    <p>Say the month is five trades, each making or losing 1% of the buying power. After every closed
+      trade, the buying power resets to 10 times the new balance:</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th rowspan="2">Trade</th><th colspan="3">Winning month</th><th colspan="3">Losing month</th></tr>
+          <tr><th>Buying power</th><th>Result</th><th>Balance after</th><th>Buying power</th><th>Result</th><th>Balance after</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>$5,000</td><td>+$50.00</td><td>$550.00</td><td>$5,000</td><td>−$50.00</td><td>$450.00</td></tr>
+          <tr><td>2</td><td>$5,500</td><td>+$55.00</td><td>$605.00</td><td>$4,500</td><td>−$45.00</td><td>$405.00</td></tr>
+          <tr><td>3</td><td>$6,050</td><td>+$60.50</td><td>$665.50</td><td>$4,050</td><td>−$40.50</td><td>$364.50</td></tr>
+          <tr><td>4</td><td>$6,655</td><td>+$66.55</td><td>$732.05</td><td>$3,645</td><td>−$36.45</td><td>$328.05</td></tr>
+          <tr><td>5</td><td>$7,320.50</td><td>+$73.21</td><td>$805.26</td><td>$3,280.50</td><td>−$32.81</td><td>$295.24</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Scaling works both ways. In the winning month, each win raises the buying power for the next trade,
+      so the balance grows to about $805 (without scaling, 5% of a fixed $5,000 would be $250, a $750
+      balance). In the losing month, each loss shrinks the buying power, so the same five losing trades take
+      about $205 rather than $250. Each 1% trade here is 10% of the balance, so this is an aggressive
+      example: figures are before spread and commission, and past or example results are not a guide to
+      future results. Leverage amplifies losses as well as gains. The most you can lose is your deposit.</p>
+    <p>What the first table shows: fee-based routes cost the same whether you win or lose, and only pay out
+      if you pass and the firm approves the payout. The live routes cost you through spread and commission on
+      every trade, so how often you trade matters more than any headline fee.</p>
 
     <h2 id="checking-a-provider-in-the-uk">Checking a provider in the UK</h2>
     <p>Whichever route you choose:</p>
