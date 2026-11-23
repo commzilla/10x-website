@@ -69,6 +69,15 @@
   .site-nav .hide-sm{display:none}
   .facts{grid-template-columns:1fr}
 }
+/* official logo lockup, same as the home page header */
+.brand{color:var(--navy); gap:10px}
+.brand:hover{text-decoration:none}
+.brand .mark{height:20px; width:auto; flex:none}
+.brand .word{display:flex; flex-direction:column; line-height:1}
+.brand .w1{font-size:15px; font-weight:600; letter-spacing:-.01em}
+.brand .w2{margin-top:4px; font-size:11px; font-weight:300; opacity:.9; white-space:nowrap}
+.site-nav a{white-space:nowrap}
 @media(max-width:420px){
-  .brand .name{display:none}
+  .brand .word{display:none}
+  .site-nav .btn{padding:8px 12px}
 }
