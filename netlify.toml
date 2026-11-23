@@ -1,0 +1,6 @@
+# Static marketing site (plain HTML/CSS/JS), no build step.
+# Publish the repo root as-is so Netlify does not fail trying to run
+# a build command that does not exist. Lets merges auto-deploy.
+[build]
+  publish = "."
+  command = "echo no build, static site"
