@@ -7,3 +7,9 @@
 /legals/privacy-policy                 /legals/privacy-policy.html                 200
 /legals/cookie-policy                  /legals/cookie-policy.html                  200
 /legals/broker-disclosure              /legals/broker-disclosure.html              200
+
+# About + Guides (plain HTML pages) at extensionless URLs
+/about                               /about.html                              200
+/guides                              /guides/index.html                       200
+/guides/funded-trading-account       /guides/funded-trading-account.html      200
+/guides/topics/*                     /guides/topics/:splat.html               200
