@@ -9,8 +9,10 @@
 /legals/broker-disclosure              /legals/broker-disclosure.html              200
 
 # About + Guides (plain HTML pages) at extensionless URLs
+# /guides is a folder, so without "!" Netlify 301s it to /guides/ before this rule runs.
+# The canonical tag and sitemap say /guides, so force the rewrite to answer 200 there.
 /about                               /about.html                              200
-/guides                              /guides/index.html                       200
+/guides                              /guides/index.html                       200!
 /guides/funded-trading-account       /guides/funded-trading-account.html      200
 /guides/how-prop-firms-make-money    /guides/how-prop-firms-make-money.html   200
 /guides/topics/*                     /guides/topics/:splat.html               200
