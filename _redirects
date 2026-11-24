@@ -12,4 +12,5 @@
 /about                               /about.html                              200
 /guides                              /guides/index.html                       200
 /guides/funded-trading-account       /guides/funded-trading-account.html      200
+/guides/how-prop-firms-make-money    /guides/how-prop-firms-make-money.html   200
 /guides/topics/*                     /guides/topics/:splat.html               200
