@@ -218,3 +218,43 @@ main > .join{margin-top:48px}
   .doc .flow ol li:not(:last-child)::after{content:"\2193"; right:auto; left:50%; top:auto; bottom:-22px; transform:translateX(-50%)}
   .doc .flow.money > div{grid-template-columns:1fr}
 }
+
+/* product landing pages (e.g. /instant-funded-account), scoped to main.lp */
+.lp .lp-hero{display:grid; grid-template-columns:1.05fr .95fr; gap:40px; align-items:center; padding:8px 0 28px}
+.lp .lp-eyebrow{margin:0 0 10px; font-size:12px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--accent)}
+.lp .lp-hero h1{font-family:var(--font-firs); font-size:40px; line-height:1.1; font-weight:700; color:var(--navy); margin:0 0 16px; letter-spacing:-.02em}
+.lp .lp-lead{font-size:17px; line-height:1.55; margin:0 0 12px}
+.lp .lp-copy p{margin:0 0 12px}
+.lp .lp-risk{font-size:13.5px; font-weight:600; color:var(--navy); background:var(--frost); border-left:3px solid var(--accent); padding:8px 12px; border-radius:6px; margin:14px 0}
+.lp .lp-btn{display:inline-block; background:var(--navy); color:var(--white); border-radius:999px; padding:13px 24px; font-weight:600; font-size:15px; margin:2px 0 10px}
+.lp .lp-btn:hover{background:var(--deep); text-decoration:none}
+.lp .lp-btn:focus-visible{outline:3px solid var(--sky); outline-offset:2px}
+.lp .lp-note{font-size:12.5px; color:var(--navy-3); margin:0}
+.lp .lp-source{font-size:12.5px; line-height:1.5; color:var(--navy-3); margin:10px 0 0}
+.lp .lp-cta{display:flex; flex-wrap:wrap; align-items:center; gap:14px 22px; margin:20px 0 4px}
+.lp .lp-cta .lp-btn{margin:0}
+.lp .lp-btn-main{display:inline-flex; align-items:center; gap:10px; background:var(--accent); padding:15px 26px; font-size:16px; box-shadow:0 10px 24px rgba(0,104,162,.28); transition:background .15s ease, transform .15s ease, box-shadow .15s ease}
+.lp .lp-btn-main:hover{background:var(--deep); transform:translateY(-1px); box-shadow:0 14px 28px rgba(1,77,126,.30)}
+.lp .lp-btn-main:active{transform:translateY(0); box-shadow:0 6px 16px rgba(1,77,126,.25)}
+.lp .lp-arrow{display:inline-block; transition:transform .15s ease}
+.lp .lp-btn-main:hover .lp-arrow{transform:translateX(3px)}
+.lp .lp-cta-points{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:4px; font-size:13px; color:var(--navy-2)}
+.lp .lp-cta-points li{margin:0; padding-left:20px; position:relative}
+.lp .lp-cta-points li::before{content:"\2713"; position:absolute; left:0; color:var(--accent); font-weight:700}
+@media (prefers-reduced-motion:reduce){ .lp .lp-btn-main, .lp .lp-arrow{transition:none} .lp .lp-btn-main:hover, .lp .lp-btn-main:hover .lp-arrow{transform:none} }
+.lp .lp-visual{margin:0}
+.lp .lp-visual img{display:block; width:100%; height:auto; border-radius:14px; border:1px solid var(--line); box-shadow:0 18px 40px rgba(21,67,89,.10)}
+.lp .lp-visual figcaption{font-size:12px; color:var(--navy-3); margin-top:8px}
+.lp .lp-facts{list-style:none; margin:8px 0 36px; padding:0; display:grid; grid-template-columns:repeat(4,1fr); gap:12px}
+.lp .lp-facts li{margin:0; padding:14px 16px; border:1px solid var(--line); border-radius:12px; background:var(--white); font-size:13.5px; line-height:1.4; color:var(--navy-2)}
+.lp .lp-facts b{display:block; margin-bottom:3px; font-family:var(--font-firs); font-size:15px; color:var(--navy)}
+.lp .doc{max-width:820px}
+.lp .doc h3{text-transform:none; letter-spacing:0; font-size:16px; color:var(--navy)}
+@media (max-width:900px){
+  .lp .lp-hero{grid-template-columns:1fr; gap:24px}
+  .lp .lp-facts{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:520px){
+  .lp .lp-hero h1{font-size:30px}
+  .lp .lp-facts{grid-template-columns:1fr}
+}
