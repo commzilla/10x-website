@@ -11,6 +11,7 @@
 # About + Guides (plain HTML pages) at extensionless URLs
 /about                               /about.html                              200
 /instant-funded-account              /instant-funded-account.html             200
+/prop-firm-statistics                /prop-firm-statistics.html               200
 /guides                              /guides/index.html                       200
 /guides/funded-trading-account       /guides/funded-trading-account.html      200
 /guides/how-prop-firms-make-money    /guides/how-prop-firms-make-money.html   200

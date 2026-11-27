@@ -260,3 +260,16 @@ main > .join{margin-top:48px}
   .lp .lp-hero h1{font-size:30px}
   .lp .lp-facts{grid-template-columns:1fr}
 }
+
+/* prop firm statistics page */
+.doc table caption{caption-side:top; text-align:left; font-size:13px; font-weight:600; color:var(--navy-2); padding:0 0 8px}
+.doc .table-wrap.wide table{min-width:960px}
+.doc .table-wrap.wide th[scope="row"]{position:sticky; left:0; z-index:1; background:var(--white); min-width:150px}
+.doc .table-wrap:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+.doc .chart{margin:24px 0; padding:16px; border:1px solid var(--line); border-radius:12px; background:var(--white)}
+.doc .chart svg{display:block; width:100%; height:auto}
+.doc .chart text{font-family:Inter, system-ui, sans-serif}
+.doc .takeaways.method{background:var(--white)}
+.doc .takeaways.method p, .doc .takeaways.method li{font-size:14.5px}
+.doc .downloads{margin:8px 0 6px 18px}
+@media(max-width:600px){ .doc .chart{padding:10px; overflow-x:auto} .doc .chart svg{min-width:600px} }
